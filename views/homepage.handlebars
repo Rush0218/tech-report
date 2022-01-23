@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Report</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+    <h1 class="title">Tech Report</h1>
+    <nav>
+        {{#if loggedIn}}
+        <a href="/main" class="nav-bar">Homepage</a>
+        <a href="/dashboard" class="nav-bar">Dashboard</a>
+        <a href="/main" class="nav-bar">Logout</a>
+        {{else}}
+        <a href="/main" class="nav-bar">Homepage</a>
+        <a href="/login"><span class="material-icons">account_circle</span></a>
+        {{/if}}
+    </nav>
+    <div>
+        <ol class="post-list">
+            {{#each posts as |post|}}
+            <li>
+                {{> post-info post }}
+            </li>
+            {{/each}}
+        </ol>
+    </div>
+</body>
+
+</html>

@@ -25,12 +25,12 @@ router.get('/:id', (req, res) => {
         include: [
             {
                 model: Post,
-                attributes: ['id', 'post_title', 'post_body', 'date_created']
+                attributes: ['id', 'itle', 'body', 'date_created']
             },
             // include the Comment model here:
             {
                 model: Comment,
-                attributes: ['id', 'comment_body', 'date_created'],
+                attributes: ['id', 'comment_text', 'date_created'],
                 include: {
                     model: Post,
                     attributes: ['post_title']
@@ -78,11 +78,11 @@ router.post('/', (req, res) => {
 router.post('/login', (req, res) => {
     User.findOne({
         where: {
-            email: req.body.email
+            username: req.body.username
         }
     }).then(dbUserData => {
         if (!dbUserData) {
-            res.status(400).json({ message: 'No user with that email address!' });
+            res.status(400).json({ message: 'Username not found!' });
             return;
         }
 

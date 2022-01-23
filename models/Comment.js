@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection.js');
+const sequelize = require('../config/connection');
 
 class Comment extends Model { }
 
@@ -11,7 +11,7 @@ Comment.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        comment_body: {
+        comment_text: {
             type: DataTypes.STRING,
             allowNull: false,
             unique: true,
@@ -24,14 +24,14 @@ Comment.init(
         user_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'user',
+                model: 'users',
                 key: 'id',
             },
         },
         post_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'post',
+                model: 'posts',
                 key: 'id',
             },
         },
@@ -41,7 +41,7 @@ Comment.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'comment',
+        modelName: 'comments',
     }
 );
 

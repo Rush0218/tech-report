@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/config');
+const sequelize = require('../config/connection');
 
 class Post extends Model { }
 
@@ -11,12 +11,12 @@ Post.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        post_title: {
-            type: DataTypes.STRING(25),
+        title: {
+            type: DataTypes.STRING(30),
             allowNull: false,
             unique: true,
         },
-        post_body: {
+        body: {
             type: DataTypes.STRING,
             allowNull: false,
             unique: true,
@@ -29,7 +29,7 @@ Post.init(
         user_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'user',
+                model: 'users',
                 key: 'id',
             },
         },
@@ -39,7 +39,7 @@ Post.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'post',
+        modelName: 'posts',
     }
 );
 

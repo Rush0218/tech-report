@@ -22,6 +22,10 @@ const userdata =
             "username": "Flare",
             "password": "password"
         },
+        {
+            "username": "Marcus",
+            "password": "password"
+        }
     ];
 
 const seedUser = () => User.bulkCreate(userdata, {

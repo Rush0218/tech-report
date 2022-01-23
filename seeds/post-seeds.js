@@ -3,49 +3,49 @@ const { Post } = require('../models');
 const postdata =
     [
         {
-            "post_title": "Beautiful Day",
-            "post_body": "This is a beautiful day",
+            "title": "Apple vs. Android",
+            "body": "Who is your champion?",
             "user_id": 1
         },
         {
-            "post_title": "Fields",
-            "post_body": "This is the greenest field",
+            "title": "Tablet",
+            "body": "I love using a tablet over a laptop, size and weight are more convenient",
             "user_id": 2
         },
         {
-            "post_title": "Do you hear it?",
-            "post_body": "This is very musical, listen!",
+            "title": "Surprise!",
+            "body": "We're having twin boys!",
             "user_id": 3
         },
         {
-            "post_title": "Snowy Day",
-            "post_body": "This is a beautiful snowy day",
-            "user_id": 4
+            "title": "Snowy Day",
+            "body": "This is a beautiful snowy day",
+            "user_id": 6
         },
         {
-            "post_title": "School",
-            "post_body": "First day of school tomorrow!!",
+            "title": "School",
+            "body": "First day of school tomorrow!!",
             "user_id": 5
         },
         {
-            "post_title": "Did anyone see Now Way Home!?",
-            "post_body": "Best movie of all time!!",
+            "title": "Did anyone see Now Way Home!?",
+            "body": "Best marvel movie of all time!!",
             "user_id": 1
         },
         {
-            "post_title": "HGTV",
-            "post_body": "Such a gloomy day, lets watch HGTV",
+            "title": "HGTV",
+            "body": "Such a gloomy day, lets watch HGTV",
+            "user_id": 5
+        },
+        {
+            "title": "Fitness!",
+            "body": "My favorite way to exercise is through calisthenics",
             "user_id": 4
         },
         {
-            "post_title": "Fields",
-            "post_body": "This is the greenest field",
-            "user_id": 3
-        },
-        {
-            "post_title": "Do you hear it?",
-            "post_body": "This is very musical, listen!",
-            "user_id": 2
+            "title": "My favorite anime!",
+            "body": "HxH is my all time favortie anime!",
+            "user_id": 4
         }
     ];
 

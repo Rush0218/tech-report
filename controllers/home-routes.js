@@ -6,14 +6,14 @@ router.get('/', (req, res) => {
     Post.findAll({
         attributes: [
             'id',
-            'post_title',
-            'post_body',
+            'title',
+            'body',
             'date_created',
         ],
         include: [
             {
                 model: Comment,
-                attributes: ['id', 'comment_body', 'date_created', 'user_id', 'post_id'],
+                attributes: ['id', 'comment_text', 'date_created', 'user_id', 'post_id'],
                 include: {
                     model: User,
                     attributes: ['username']
@@ -57,14 +57,14 @@ router.get('/post/:id', (req, res) => {
         },
         attributes: [
             'id',
-            'post_title',
-            'post_body',
+            'title',
+            'body',
             'date_created',
         ],
         include: [
             {
                 model: Comment,
-                attributes: ['id', 'comment_body', 'date_created', 'user_id', 'post_id'],
+                attributes: ['id', 'comment_text', 'date_created', 'user_id', 'post_id'],
                 include: {
                     model: User,
                     attributes: ['username']
