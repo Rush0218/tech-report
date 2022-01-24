@@ -46,30 +46,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Report</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheet/style.css">
 </head>
 
 <body>
-    <h1 class="title">Tech Report</h1>
-    <nav>
-        {{#if loggedIn}}
-        <a href="/homepage" class="nav-bar">Homepage</a>
-        <a href="/dashboard" class="nav-bar">Dashboard</a>
-        <a href="/homepage" class="nav-bar">Logout</a>
-        {{else}}
-        <a href="/homepage" class="nav-bar">Homepage</a>
-        <a href="/login"><span class="material-icons">account_circle</span></a>
-        {{/if}}
-    </nav>
     <div>
-        <ol class="post-list">
-            {{#each posts as |post|}}
-            <li>
-                {{> post-info post }}
-            </li>
-            {{/each}}
-        </ol>
+        <header class="navigation">
+            <nav class="nav-bar">
+                {{#if loggedIn}}
+                <div>
+                    <a href="/" class="title">Tech Report</a>
+                    <a href="/" class="nav-home">Home</a>
+                    <a href="/dashboard" class="nav-item">Dashboard</a>
+                </div>
+                <div>
+                    <a href="/" class="nav-logout" id="logout">Logout</a>
+                </div>
+                {{else}}
+                <div>
+                    <a href="/" class="title">Tech Report</a>
+                    <a href="/" class="nav-home">Home</a>
+                </div>
+                <div>
+                    <a href="/login" class="login-btn"><span class="material-icons">account_circle</span></a>
+                </div>
+                {{/if}}
+            </nav>
+        </header>
+        <main>
+            {{{body}}}
+        </main>
     </div>
+
+    {{#if loggedIn}}
+    <script src="/javascript/logout.js"></script>
+    {{/if}}
 </body>
 
 </html>

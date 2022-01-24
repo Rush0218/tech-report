@@ -1,0 +1,193 @@
+:root {
+    --primary-color: ; 
+    --secondary-color: ; 
+}
+
+*{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background-color: black;
+    color: white; 
+}
+
+a {
+    text-decoration: none;
+    color: white; 
+}
+
+a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button {
+    border: none;
+}
+
+.post-list li:not(:last-child) {
+    margin-bottom: 35px;
+}
+
+.nav-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.nav-home {
+    font-size: .85rem;
+    margin-right: 15px;
+}
+
+.nav-item {
+    font-size: .85rem;
+}
+
+
+.nav-logout {
+    font-size: .85rem;
+    margin-right: 7px;
+}
+
+.title {
+    font-size: 1.5rem;
+    margin-right: 50px;
+    margin-left: 20px;
+}
+
+.login-btn {
+    border: none;
+    padding: 0;
+    background: none;
+    margin-top: 10px;
+    margin-right: 15px;
+    color: white; 
+}
+
+.post-list {
+    list-style-type: none;
+}
+
+.post-title {
+    font-size: .95rem;
+    font-weight: bold;
+    padding-bottom: 8px;
+}
+
+.post {
+    margin-left: 20px;
+    margin-bottom: 35px;
+    font-size: .85rem;
+}
+
+.meta {
+    font-size: .75rem;
+}
+
+.comment-amount {
+    margin-bottom: 35px;
+}
+
+.comments {
+    margin-left: 20px;
+}
+
+.comment {
+    margin-bottom: 10px;
+}
+
+.text {
+    font-size: .75rem;
+}
+
+.create-account {
+    margin-left: 20px;
+}
+
+.login-form {
+    margin-bottom: 45px;
+}
+
+.login-form button {
+    margin-top: 8px;
+    padding: 3px;
+    border-radius: 3px;
+}
+.signup-form button {
+    margin-top: 8px;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+.new-post-form button {
+    margin-top: 15px;
+    margin-left: 20px;
+    padding: 3px;
+    border-radius: 3px;
+    background-color: brown;
+    color: white;
+}
+
+.profile {
+    margin-left: 20px;
+}
+
+.profile-posts ul {
+    list-style-type: none;
+}
+
+.profile-post-list li:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.create-post {
+    margin-bottom: 45px;
+}
+
+.your-posts {
+    margin-bottom: 20px;
+}
+
+.edit-link {
+    font-size: .85rem;
+    margin-left: 18px;
+    background-color: brown;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+.create-post-title {
+    margin-bottom: 20px;
+}
+
+#post-title {
+    margin-left: 18px;
+}
+#post-body {
+    margin-left: 18px;
+    margin-top: 5px;
+    height: 50px;
+}
+
+.comment-form {
+    margin-left: 20px;
+    margin-bottom:40px;
+}
+
+.comment-form button {
+    margin-top: 15px;
+    padding: 3px;
+    border-radius: 3px;
+    background-color: brown;
+    color: white;
+}
