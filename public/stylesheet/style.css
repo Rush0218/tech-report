@@ -195,3 +195,28 @@ button {
     background-color: brown;
     color: white;
 }
+
+.edit-posts {
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+
+.edit-post-title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.edit-post-form button {
+    margin-top: 15px;
+    margin-right: 5px;
+    padding: 3px;
+    border-radius: 3px;
+    background-color: brown;
+    color: white;
+}
+
+.edit-post-body {
+    height: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
