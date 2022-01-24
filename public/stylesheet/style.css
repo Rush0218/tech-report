@@ -122,11 +122,15 @@ button {
     margin-top: 8px;
     padding: 3px;
     border-radius: 3px;
+    background-color: brown;
+    color: white;
 }
 .signup-form button {
     margin-top: 8px;
     padding: 3px;
     border-radius: 3px;
+    background-color: brown;
+    color: white;
 }
 
 .new-post-form button {
